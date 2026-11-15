@@ -232,8 +232,8 @@ q{display:block;font-size:1.05rem;line-height:1.5;margin:6px 8px 8px;quotes:none
   <div id="modal" aria-hidden="true"><img class="fl tl" src="img/flor-tl.png" alt=""><img class="fl br" src="img/flor-br.png" alt=""><div class="sheet"><button class="x" aria-label="Voltar ao convite">‹ Voltar</button><div id="conteudo"></div></div></div>
 </div>
 
-<audio id="audio" loop preload="auto"></audio>
-
+<!-- TAG DE MÚSICA INTERNA / ARQUIVO LOCAL -->
+<audio id="audio" src="ee.mp3" loop preload="auto"></audio>
 <script>
 /* ============ EDITE AQUI ============ */
 const CFG = {
@@ -250,33 +250,55 @@ const CFG = {
 const $=s=>document.querySelector(s), intro=$('#intro'), sc=$('#sc'), som=$('#som'), mais=$('#mais'), audio=$('#audio'), modal=$('#modal'), cont=$('#conteudo');
 
 /* --- Música --- */
-let synth=null, usandoSynth=false, tocando=false;
-function criaSynth(){
-  const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return null;
-  const ctx=new AC(), mestre=ctx.createGain(); mestre.gain.value=.5;
-  const lp=ctx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=2200;
-  const d=ctx.createDelay(1); d.delayTime.value=.38; const fb=ctx.createGain(); fb.gain.value=.38; d.connect(fb); fb.connect(d);
-  lp.connect(mestre); lp.connect(d); d.connect(mestre); mestre.connect(ctx.destination);
-  const acordes=[[48,52,55,60],[45,52,57,60],[41,48,53,60],[43,50,55,59]]; // C Am F G
-  let prox=ctx.currentTime+.1, passo=0; const dur=.46, seq=[0,1,2,3,2,1,2,3];
-  const hz=n=>440*Math.pow(2,(n-69)/12);
-  function nota(n,t,v,len){const o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.value=hz(n);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0008,t+len);o.connect(g);g.connect(lp);o.start(t);o.stop(t+len+.05);}
-  function agenda(){while(prox<ctx.currentTime+.6){const ac=acordes[Math.floor(passo/8)%4],i=passo%8;
-      nota(ac[seq[i]]+12,prox,.16,1.6);
-      if(i===0){nota(ac[0]-12,prox,.2,3.4);nota(ac[1]+24,prox+dur*3,.07,1.4);} prox+=dur;passo++;}}
-  setInterval(agenda,150);
-  return {play:()=>ctx.resume(),pause:()=>ctx.suspend()};
+let tocando = false;
+
+function tocar() {
+  audio.play().then(() => {
+    tocando = true;
+    icone();
+  }).catch(err => {
+    console.log("O navegador bloqueou a reprodução automática sem interação:", err);
+  });
 }
-function iniciaSynth(){usandoSynth=true;synth=synth||criaSynth();if(synth){synth.play();tocando=true;icone();}}
-function tocar(){
-  if(usandoSynth){iniciaSynth();return;}
-  audio.play().then(()=>{tocando=true;icone();}).catch(iniciaSynth);
+
+function pausar() {
+  audio.pause();
+  tocando = false;
+  icone();
 }
-function pausar(){tocando=false;if(usandoSynth){synth&&synth.pause();}else audio.pause();icone();}
-function icone(){som.innerHTML='<svg class="i"><use href="#'+(tocando?'som':'mudo')+'"/></svg>';}
-som.onclick=()=>tocando?pausar():tocar();
-audio.src=CFG.ee;
+
+function icone() {
+  som.innerHTML = '<svg class="i"><use href="#' + (tocando ? 'som' : 'mudo') + '"/></svg>';
+}
+
+som.onclick = () => tocando ? pausar() : tocar();
+
+/* --- Abrir envelope --- */
+let aberto = false;
+function abrir() {
+  if (aberto) return;
+  aberto = true;
+  intro.classList.add('go');
+  
+  tocar(); // Tenta iniciar a música ao abrir o convite
+  
+  setTimeout(() => {
+    som.classList.add('on');
+    mais.classList.add('on');
+    revela(document.querySelector('.sec'));
+    icone();
+  }, 1100);
+  
+  setTimeout(() => intro.remove(), 2800);
+}
+
+intro.addEventListener('click', abrir);
+intro.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    abrir();
+  }
+});
 
 /* --- Abrir envelope --- */
 let aberto=false;
