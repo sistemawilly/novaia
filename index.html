@@ -276,7 +276,7 @@ function tocar(){
 function pausar(){tocando=false;if(usandoSynth){synth&&synth.pause();}else audio.pause();icone();}
 function icone(){som.innerHTML='<svg class="i"><use href="#'+(tocando?'som':'mudo')+'"/></svg>';}
 som.onclick=()=>tocando?pausar():tocar();
-audio.src=CFG.musica;
+audio.src=CFG.ee;
 
 /* --- Abrir envelope --- */
 let aberto=false;
