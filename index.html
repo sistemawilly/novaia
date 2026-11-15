@@ -1,236 +1,351 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101827">
-<title>Do Zero ao Primeiro Cliente | Investigação de Empresa</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5eadb">
+<title>Casamento de Marília & João Daniel · 08 de novembro de 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#101827;--navy2:#172338;--gold:#d8ad62;--gold2:#f0d39b;--ink:#1d2939;--muted:#697586;--line:#e5e9ef;--paper:#fff;--bg:#f3f5f8;--green:#237b61}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
-.topbar{background:linear-gradient(120deg,var(--navy),#1c2c43);color:white;padding:25px 22px 54px}
-.top-inner{max-width:1000px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px}
-.brand{display:flex;align-items:center;gap:13px}.brand-mark{width:42px;height:42px;border:1px solid #b98d4d;border-radius:12px;display:grid;place-items:center;color:var(--gold2);font-weight:800;font-size:18px}.brand small{display:block;color:#c2cbd7;font-size:11px;letter-spacing:2px;text-transform:uppercase}.brand strong{font-size:15px;letter-spacing:.5px}
-.top-tag{font-size:12px;color:#d5dce6;border:1px solid #526075;border-radius:30px;padding:8px 13px}
-main{max-width:1000px;margin:-31px auto 60px;padding:0 18px}.intro{background:white;border-radius:18px;padding:25px 28px;box-shadow:0 12px 35px #17233812;margin-bottom:18px}
-.eyebrow{font-size:11px;letter-spacing:1.7px;text-transform:uppercase;color:#a27637;font-weight:800}.intro h1{font-size:clamp(23px,4vw,31px);margin:8px 0;color:var(--navy);letter-spacing:-.8px}.intro p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
-.progress-wrap{display:flex;align-items:center;gap:14px;margin-top:21px}.progress{height:6px;background:#edf0f4;border-radius:10px;overflow:hidden;flex:1}.progress span{display:block;height:100%;width:50%;background:linear-gradient(90deg,#b88745,#e5c78f);transition:width .25s}.step-label{font-size:12px;color:#667085;font-weight:700;white-space:nowrap}
-.form-card{background:white;border:1px solid #e9edf2;border-radius:18px;box-shadow:0 8px 28px #1723380b;overflow:hidden}
-.card-head{padding:22px 27px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.card-head h2{font-size:17px;margin:0;color:var(--navy)}.page-pill{font-size:11px;font-weight:800;color:#8b642e;background:#fbf5ea;padding:7px 10px;border-radius:20px}
-.form-page{padding:25px 27px 30px}.form-page[hidden]{display:none}
-.section{margin:0 0 28px}.section:last-child{margin-bottom:0}.section-title{display:flex;align-items:center;gap:11px;margin:0 0 17px;color:var(--navy);font-size:14px;font-weight:800}.num{width:29px;height:29px;border-radius:9px;background:#f7f0e5;color:#956c32;display:grid;place-items:center;font-size:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{min-width:0}.field.full{grid-column:1/-1}label,.field-label{display:block;font-size:12px;font-weight:700;color:#344054;margin-bottom:7px}
-input[type=text],input[type=url],input[type=date],textarea,select{width:100%;border:1px solid #dce2e9;border-radius:10px;background:#fff;padding:12px 13px;color:#1d2939;font:inherit;font-size:13px;outline:none;transition:border .2s,box-shadow .2s}
-textarea{min-height:88px;resize:vertical;line-height:1.5}input:focus,textarea:focus,select:focus{border-color:#c49a5b;box-shadow:0 0 0 3px #d8ad6224}input::placeholder,textarea::placeholder{color:#a0a8b4}
-.helper{font-size:11px;color:#87909e;margin-top:6px;line-height:1.45}
-.options{display:flex;flex-wrap:wrap;gap:9px}.option{position:relative}.option input{position:absolute;opacity:0;pointer-events:none}.option span{display:inline-flex;align-items:center;gap:7px;border:1px solid #dfe4ea;border-radius:9px;padding:9px 12px;font-size:12px;color:#475467;cursor:pointer;transition:.2s}.option span:before{content:"";width:13px;height:13px;border:1px solid #c3cbd5;border-radius:4px;background:white}.option input:checked+span{border-color:#c59b5e;background:#fbf6ed;color:#765323}.option input:checked+span:before{background:#b98b4c;border-color:#b98b4c;box-shadow:inset 0 0 0 3px white}
-.radio .option span:before{border-radius:50%}
-.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 27px;background:#fafbfd;border-top:1px solid var(--line)}.btn{border:0;border-radius:10px;padding:12px 18px;font-weight:800;font-size:12px;cursor:pointer;transition:transform .15s,opacity .15s}.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.btn-secondary{background:#edf0f4;color:#475467}.btn-primary{background:var(--navy);color:white}.btn-gold{background:linear-gradient(120deg,#bd914f,#e0bd80);color:#201a10}.action-right{display:flex;gap:9px}
-.note{display:flex;gap:11px;align-items:flex-start;background:#f8f5ef;border:1px solid #eee3d1;border-radius:12px;padding:14px 16px;margin-top:18px;color:#685638;font-size:12px;line-height:1.5}.note strong{display:block;margin-bottom:2px;color:#4d3d25}
-.footer{text-align:center;color:#929baa;font-size:11px;margin-top:19px}
-#pdfContent{display:none}
-@media(max-width:650px){.topbar{padding:19px 17px 47px}.top-tag{display:none}main{padding:0 12px}.intro{padding:21px 19px}.form-page{padding:21px 18px}.card-head,.actions{padding:17px 18px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.actions{align-items:stretch}.action-right{flex:1;justify-content:flex-end}.btn{padding:12px 13px}.section-title{font-size:13px}}
-@media print{
- @page{size:A4;margin:15mm 16mm}
- body{background:white;color:#202938}.topbar,main,.footer{display:none!important}#pdfContent{display:block!important;font-family:Arial,sans-serif;color:#202938}
- .pdf-page{page-break-after:always;min-height:260mm;position:relative}.pdf-page:last-child{page-break-after:auto}
- .pdf-head{border-bottom:2px solid #b98b4c;padding-bottom:13px;margin-bottom:19px}.pdf-kicker{font-size:9px;letter-spacing:2px;color:#96703b;font-weight:bold;text-transform:uppercase}.pdf-head h1{font-size:20px;margin:6px 0 4px;color:#142033}.pdf-head p{font-size:9px;color:#687386;margin:0}
- .pdf-section{margin:0 0 17px;break-inside:avoid}.pdf-section h2{font-size:11px;color:#142033;border-bottom:1px solid #e4e8ed;padding-bottom:6px;margin:0 0 9px}.pdf-item{margin:0 0 9px;break-inside:avoid}.pdf-item b{display:block;font-size:8px;color:#7b6545;margin-bottom:3px;text-transform:uppercase;letter-spacing:.4px}.pdf-item div{font-size:10px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;min-height:12px}.pdf-empty{color:#9aa2ad;font-style:italic}.pdf-foot{position:absolute;bottom:0;left:0;right:0;border-top:1px solid #e5e8ed;padding-top:7px;font-size:8px;color:#929baa;display:flex;justify-content:space-between}
-}
+:root{--bg:#f1eae0;--terra:#c8693f;--terra2:#b5532f;--ink:#5a4a3c;--gold:#e2b88a;--script:'Allura','Brush Script MT',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Mulish',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:radial-gradient(ellipse at 50% 0,#fff8ee,#e9dcc9 70%);font-family:var(--serif);color:var(--ink);overflow:hidden}
+#stage{position:relative;width:min(100vw,430px);height:100svh;margin:0 auto;background:var(--bg);overflow:hidden;box-shadow:0 0 60px rgba(90,74,60,.28)}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+button{font-family:inherit}
+
+/* Abertura (arte do convite) */
+#intro{position:absolute;inset:0;z-index:30;background:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:opacity .9s ease .7s;-webkit-tap-highlight-color:transparent}
+#intro.go{opacity:0;pointer-events:none}
+.iw{position:relative;flex:none;height:100%;aspect-ratio:357/632;transform-origin:50% 66.8%;transition:transform 1.6s cubic-bezier(.6,.05,.3,1)}
+.iw img{width:100%;height:100%;display:block;user-select:none;-webkit-user-drag:none}
+#intro.go .iw{transform:scale(3.4)}
+.anel{position:absolute;left:49.9%;top:66.8%;width:21%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:2px solid rgba(255,238,215,.95);box-shadow:0 0 14px rgba(255,220,180,.8);animation:anel 2s ease-out infinite;pointer-events:none}
+@keyframes anel{0%{transform:translate(-50%,-50%) scale(.85);opacity:.9}100%{transform:translate(-50%,-50%) scale(1.5);opacity:0}}
+
+.nomes{font-family:var(--script);color:var(--terra);font-size:clamp(2.6rem,12vw,3.4rem);line-height:1.05;text-align:center}
+
+/* Convite */
+.sc{position:absolute;inset:0;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sc::-webkit-scrollbar{display:none}
+.sec{position:relative;min-height:100svh;scroll-snap-align:start;padding:clamp(56px,11svh,92px) 30px 56px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--bg)}
+.sec>*:not(.fl){position:relative;z-index:2}
+h2{font-family:var(--script);font-weight:400;color:var(--terra);font-size:clamp(2.7rem,13vw,3.5rem);line-height:1.02;margin-bottom:12px}
+p{font-size:1.14rem;line-height:1.5;margin-bottom:14px}
+.div{display:flex;align-items:center;gap:8px;width:70%;margin:6px auto 16px;color:var(--terra)}
+.div::before,.div::after{content:"";flex:1;height:1px;background:var(--gold)}
+.fl{position:absolute;z-index:1;pointer-events:none;height:auto}
+.tl{top:0;left:0;width:150px}.tr{top:0;right:0;width:150px;transform:scaleX(-1)}.br{bottom:0;right:0;width:130px}.bl{bottom:0;left:0;width:130px;transform:scaleX(-1)}
+.sm.tl,.sm.tr{width:105px}.sm.br,.sm.bl{width:92px}
+
+.capa{padding:0 0 70px;justify-content:flex-start}
+.capa .foto{width:100%;height:40svh;object-fit:cover;object-position:center 30%;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.capa h1{font-family:var(--script);font-weight:400;color:var(--terra);font-size:clamp(2.7rem,12.5vw,3.5rem);line-height:1;margin:6px 0 10px}
+.capa p{font-size:1rem;margin:0 36px 10px}
+.data{font-size:1.9rem;color:var(--terra);letter-spacing:.06em}
+
+.pais small{display:block;font-size:1.05rem;margin-top:6px}
+.pais strong{display:block;font-weight:500;font-size:1.55rem;line-height:1.2;margin:2px 0 8px}
+q{display:block;font-size:1.05rem;line-height:1.5;margin:6px 8px 8px;quotes:none}
+.ref{color:var(--terra);font-size:1.08rem}
+
+.tl-w{position:relative;text-align:left;width:100%;padding-left:78px;margin:6px 0 14px}
+.tl-w::before{content:"";position:absolute;left:30px;top:10px;bottom:10px;width:1px;background:var(--terra)}
+.it{position:relative;margin-bottom:14px}
+.it .ic{position:absolute;left:-78px;top:0;width:60px;height:60px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--terra);font-size:1.8rem}
+.it b{display:block;font-weight:500;color:var(--terra);font-size:1.3rem}
+.it p{font-size:1.02rem;line-height:1.42;margin:2px 0 0}
+.faixa,.moldura{width:100%;display:block;border:1px solid var(--gold);padding:3px;background:#fff8ee}
+
+.det{width:100%;text-align:left;margin:2px 0 10px}
+.det div{display:flex;gap:16px;align-items:center;padding:7px 0}
+.det .ic{font-size:2rem;color:var(--terra);width:48px;flex:none}
+.det span{border-left:1px solid var(--gold);padding-left:14px;font-size:1.02rem;line-height:1.3}
+.det em{display:block;font-style:normal;color:var(--terra2);font-size:.95rem;letter-spacing:.04em}
+.toque{font-family:var(--script);color:var(--terra);font-size:1.6rem;margin:0 0 8px}
+.arcos{display:flex;gap:7px;justify-content:center}
+.arcos button{flex:1 1 0;min-width:0;max-width:74px;background:transparent;border:1px solid var(--gold);border-radius:40px 40px 6px 6px;padding:12px 0 8px;color:var(--terra);cursor:pointer;font-size:.62rem;letter-spacing:.03em;display:flex;flex-direction:column;align-items:center;gap:8px;transition:background .2s,transform .2s}
+.arcos button:hover,.arcos button:focus-visible{background:#fff3e2;transform:translateY(-3px);outline:none}
+.arcos .i{font-size:1.8rem}.arcos span{color:var(--ink);font-weight:600;text-transform:uppercase}
+
+#som{position:absolute;top:16px;right:16px;z-index:20;width:46px;height:46px;border-radius:50%;border:0;background:rgba(200,200,200,.6);backdrop-filter:blur(6px);color:#6d6256;font-size:1.25rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+#som.on{display:flex}
+#mais{white-space:nowrap;position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;display:none;align-items:center;gap:12px;background:#fff8ee;border:1px solid var(--gold);border-radius:30px;padding:10px 12px 10px 22px;font-family:var(--sans);font-size:.88rem;color:var(--ink);box-shadow:0 6px 18px rgba(90,74,60,.2);transition:opacity .4s;cursor:pointer}
+#mais.on{display:flex}#mais.off{opacity:0;pointer-events:none}
+#mais b{width:26px;height:26px;border-radius:50%;background:#efd9b5;display:flex;align-items:center;justify-content:center;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(3px)}}
+
+.cta{display:inline-block;margin-top:6px;background:var(--terra);color:#fff;text-decoration:none;border-radius:30px;padding:12px 28px;font-family:var(--sans);font-size:.95rem}
+.sheet input,.sheet textarea{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border:1px solid var(--gold);border-radius:10px;background:#fffaf2;color:var(--ink);margin-bottom:8px}
+.msgs{text-align:left;margin-top:14px;max-height:30svh;overflow:auto}
+.msgs div{border-top:1px solid var(--gold);padding:8px 0;font-size:1rem}.msgs b{color:var(--terra2)}
+
+/* Páginas internas */
+#modal{position:absolute;inset:0;z-index:40;background:var(--bg);transform:translateX(100%);visibility:hidden;transition:transform .45s ease,visibility 0s .45s}
+#modal.on{transform:none;visibility:visible;transition:transform .45s ease}
+.sheet{position:relative;z-index:2;height:100%;overflow-y:auto;padding:76px 30px calc(48px + env(safe-area-inset-bottom));text-align:center}
+.sheet h3{font-family:var(--script);font-weight:400;font-size:3.3rem;line-height:1.05;color:var(--terra);margin-bottom:14px}
+.sheet .lista,.sheet .msgs{max-height:none}
+.x{position:absolute;top:14px;left:14px;z-index:3;background:#fff8ee;border:1px solid var(--gold);border-radius:30px;padding:9px 18px;font-family:var(--sans);font-size:.9rem;color:var(--ink);cursor:pointer}
+.info{text-align:left;margin:6px 0 16px}.info div{padding:9px 0;border-top:1px solid var(--gold)}.info em{display:block;font-style:normal;color:var(--terra2);font-size:.92rem;letter-spacing:.04em}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--gold);padding:9px 0;text-align:left;font-size:1.05rem;line-height:1.2}
+.bt{display:flex;gap:6px;flex:none}
+.bt button{border:1px solid var(--gold);background:transparent;border-radius:20px;padding:6px 11px;font-family:var(--sans);font-size:.78rem;color:var(--ink);cursor:pointer}
+.bt button.on{background:var(--terra);color:#fff;border-color:var(--terra)}.bt button.no.on{background:#8a7b6c;border-color:#8a7b6c}
+.lista{max-height:32svh;overflow:auto;margin:10px 0 14px}
+.add{display:flex;gap:6px}.add input{margin:0}.add button{flex:none;border:1px solid var(--terra);background:transparent;color:var(--terra);border-radius:10px;padding:0 14px;cursor:pointer}
+.pix{margin-top:20px;border:1px dashed var(--terra);border-radius:14px;padding:14px;background:#fffaf2}
+.pix b{color:var(--terra2);font-weight:600}
+.pix code{display:block;word-break:break-all;font-family:var(--sans);font-size:.82rem;margin:4px 0 10px;user-select:all}
+.cta.line{background:transparent;color:var(--terra);border:1px solid var(--terra);cursor:pointer}
+.qs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 12px}
+.qs button{border:1px solid var(--gold);background:transparent;border-radius:12px;padding:12px 0;font-size:1.3rem;color:var(--ink);cursor:pointer;font-family:var(--serif)}
+.qs button.on{background:var(--terra);border-color:var(--terra);color:#fff}
+.st{color:var(--terra2);min-height:1.4em;margin:6px 0;font-size:1rem}
+.row.tom span:first-child{text-decoration:line-through;opacity:.5}
+.tag{font-family:var(--sans);font-size:.78rem;color:#8a7b6c;padding:6px 4px}.tag.meu{color:var(--terra2);font-weight:600}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
+.in .rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+@media (max-height:700px){.sec{padding-top:44px;padding-bottom:36px}p{font-size:1.04rem;margin-bottom:9px}h2{font-size:2.5rem}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="top-inner">
- <div class="brand"><div class="brand-mark">DZ</div><div><small>Projeto de prospecção</small><strong>DO ZERO AO PRIMEIRO CLIENTE</strong></div></div>
- <div class="top-tag">FICHA DE INVESTIGAÇÃO · 01</div>
-</div></header>
-<main>
- <section class="intro">
-  <div class="eyebrow">Diagnóstico comercial</div>
-  <h1>Ficha de investigação de empresa</h1>
-  <p>Registre o que você observou sobre uma empresa para identificar oportunidades reais e preparar uma abordagem comercial. Uma ficha por empresa. Não invente informações.</p>
-  <div class="progress-wrap"><div class="progress"><span id="progressBar"></span></div><div class="step-label" id="stepLabel">Etapa 1 de 2</div></div>
- </section>
- <section class="form-card">
-  <div class="card-head"><h2 id="pageTitle">Identificação e presença digital</h2><span class="page-pill" id="pagePill">PÁGINA 1 / 2</span></div>
-  <form id="investigationForm">
-   <div class="form-page" id="page1">
-    <section class="section">
-     <h3 class="section-title"><span class="num">01</span> Identificação do negócio</h3>
-     <div class="grid">
-      <div class="field full"><label for="company">Nome da empresa / segmento</label><input id="company" type="text" placeholder="Ex.: Bella Moda — loja de roupas"></div>
-      <div class="field full"><label for="location">Cidade / bairro / endereço comercial, se relevante</label><input id="location" type="text" placeholder="Localização observada"></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">02</span> Links e contato comercial público</h3>
-     <div class="grid">
-      <div class="field full"><label for="maps">Link do Google Maps</label><input id="maps" type="url" placeholder="https://maps.google.com/..."></div>
-      <div class="field"><label for="social">Instagram / outras redes</label><textarea id="social" placeholder="Cole os links dos perfis encontrados"></textarea></div>
-      <div class="field"><label for="site">Site, catálogo ou cardápio</label><textarea id="site" placeholder="Cole os links encontrados"></textarea></div>
-      <div class="field full"><label for="contact">Contato comercial público e onde foi encontrado</label><textarea id="contact" placeholder="Ex.: WhatsApp exibido na bio do Instagram"></textarea></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">03</span> Atividade nas redes sociais</h3>
-     <div class="grid">
-      <div class="field"><label for="lastPost">Data da última postagem observada</label><input id="lastPost" type="date"></div>
-      <div class="field"><span class="field-label">Publica com frequência?</span><div class="options radio">
-       <label class="option"><input type="radio" name="frequency" value="Sim"><span>Sim</span></label>
-       <label class="option"><input type="radio" name="frequency" value="Às vezes"><span>Às vezes</span></label>
-       <label class="option"><input type="radio" name="frequency" value="Não"><span>Não</span></label>
-       <label class="option"><input type="radio" name="frequency" value="Não verificado"><span>Não verificado</span></label>
-      </div></div>
-      <div class="field full"><span class="field-label">Formatos encontrados</span><div class="options">
-       <label class="option"><input type="checkbox" name="formats" value="Vídeos"><span>Vídeos</span></label>
-       <label class="option"><input type="checkbox" name="formats" value="Fotos"><span>Fotos</span></label>
-       <label class="option"><input type="checkbox" name="formats" value="Carrosséis"><span>Carrosséis</span></label>
-       <label class="option"><input type="checkbox" name="formats" value="Outros"><span>Outros</span></label>
-      </div></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">04</span> O que já funciona</h3>
-     <div class="field"><label for="strengths">Pontos positivos observados, com exemplos concretos</label><textarea id="strengths" placeholder="Ex.: fotos próprias dos produtos, avaliações positivas, informações atualizadas..."></textarea></div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">05</span> Oportunidades de melhoria</h3>
-     <div class="grid">
-      <div class="field"><label for="opportunity1">Problema / oportunidade 1 + evidência observada</label><textarea id="opportunity1" placeholder="O que foi observado e por que é uma oportunidade?"></textarea></div>
-      <div class="field"><label for="opportunity2">Problema / oportunidade 2 + evidência observada</label><textarea id="opportunity2" placeholder="O que foi observado e por que é uma oportunidade?"></textarea></div>
-     </div>
-    </section>
-   </div>
-   <div class="form-page" id="page2" hidden>
-    <section class="section">
-     <h3 class="section-title"><span class="num">06</span> Estrutura comercial</h3>
-     <div class="grid">
-      <div class="field full"><span class="field-label">O negócio possui</span><div class="options">
-       <label class="option"><input type="checkbox" name="structure" value="Site"><span>Site</span></label>
-       <label class="option"><input type="checkbox" name="structure" value="Catálogo"><span>Catálogo</span></label>
-       <label class="option"><input type="checkbox" name="structure" value="Página de serviços"><span>Página de serviços</span></label>
-       <label class="option"><input type="checkbox" name="structure" value="Contato claro"><span>Contato claro</span></label>
-      </div></div>
-      <div class="field full"><label for="clarity">É fácil entender o que vende e como entrar em contato?</label><textarea id="clarity" placeholder="Descreva sua avaliação com base no que encontrou"></textarea></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">07</span> Classificação e prioridade</h3>
-     <div class="grid">
-      <div class="field"><span class="field-label">Perfil digital</span><div class="options radio">
-       <label class="option"><input type="radio" name="profile" value="A - Inicial"><span>A - Inicial</span></label>
-       <label class="option"><input type="radio" name="profile" value="B - Desorganizado"><span>B - Desorganizado</span></label>
-       <label class="option"><input type="radio" name="profile" value="C - Estruturado"><span>C - Estruturado</span></label>
-      </div></div>
-      <div class="field"><span class="field-label">Prioridade</span><div class="options radio">
-       <label class="option"><input type="radio" name="priority" value="Alta"><span>Alta</span></label>
-       <label class="option"><input type="radio" name="priority" value="Média"><span>Média</span></label>
-       <label class="option"><input type="radio" name="priority" value="Baixa"><span>Baixa</span></label>
-      </div></div>
-      <div class="field full"><label for="reason">Justificativa baseada no que foi observado</label><textarea id="reason" placeholder="Explique os sinais que sustentam a classificação e a prioridade"></textarea></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">08</span> Ideia de material demonstrativo</h3>
-     <div class="grid">
-      <div class="field"><label for="piece">Primeira peça sugerida, vídeo, post, carrossel, página etc.</label><textarea id="piece" placeholder="Qual material poderia demonstrar valor?"></textarea></div>
-      <div class="field"><label for="objective">Objetivo do material e para quem seria</label><textarea id="objective" placeholder="O que pretende melhorar e quem deve ser alcançado?"></textarea></div>
-      <div class="field full"><label for="references">Links e arquivos de referência disponíveis</label><textarea id="references" placeholder="Cole links ou descreva os arquivos encontrados"></textarea></div>
-     </div>
-    </section>
-    <section class="section">
-     <h3 class="section-title"><span class="num">09</span> Pendências e próximo passo</h3>
-     <div class="grid">
-      <div class="field"><label for="pending">Informações que ainda precisamos confirmar</label><textarea id="pending" placeholder="Liste dúvidas ou dados que faltam"></textarea></div>
-      <div class="field"><label for="authorization">Autorização necessária para uso de imagens, marcas ou vídeos</label><textarea id="authorization" placeholder="O que precisa de autorização antes de usar?"></textarea></div>
-      <div class="field full"><label for="nextAction">Próxima ação e responsável</label><textarea id="nextAction" placeholder="Ação definida e quem ficará responsável"></textarea></div>
-     </div>
-    </section>
-    <div class="note"><div>✦</div><div><strong>Próximo passo</strong>Revise os dados, gere o PDF e envie o documento à IA como briefing. O PDF será organizado em duas páginas, mantendo as respostas vinculadas às perguntas.</div></div>
-   </div>
-  </form>
-  <div class="actions">
-   <button class="btn btn-secondary" id="backBtn" type="button" disabled>← Voltar</button>
-   <div class="action-right"><button class="btn btn-secondary" id="clearBtn" type="button">Limpar</button><button class="btn btn-primary" id="nextBtn" type="button">Continuar →</button><button class="btn btn-gold" id="pdfBtn" type="button" hidden>Gerar PDF ↗</button></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ramo" viewBox="0 0 220 220">
+ <g fill="#5b6148"><ellipse cx="120" cy="40" rx="30" ry="9" transform="rotate(-25 120 40)"/><ellipse cx="30" cy="150" rx="30" ry="9" transform="rotate(65 30 150)"/><ellipse cx="110" cy="115" rx="28" ry="8" transform="rotate(20 110 115)"/><ellipse cx="70" cy="165" rx="26" ry="8" transform="rotate(40 70 165)"/><ellipse cx="150" cy="75" rx="24" ry="7" transform="rotate(-5 150 75)"/></g>
+ <g stroke="#d9a56f" stroke-width="2" fill="#e6b784"><path d="M30 20 Q110 30 190 12M40 60 Q120 70 200 50M18 100 Q70 130 130 160" fill="none"/><ellipse cx="170" cy="18" rx="4" ry="7" transform="rotate(70 170 18)"/><ellipse cx="185" cy="52" rx="4" ry="7" transform="rotate(70 185 52)"/><ellipse cx="120" cy="150" rx="4" ry="7" transform="rotate(30 120 150)"/><ellipse cx="90" cy="26" rx="4" ry="7" transform="rotate(75 90 26)"/></g>
+ <circle cx="70" cy="68" r="34" fill="#b5532f"/><circle cx="70" cy="68" r="26" fill="#c8693f"/><path d="M52 68a18 18 0 1 1 18 18M61 68a9 9 0 1 1 9 9" fill="none" stroke="#e59468" stroke-width="3"/><path d="M44 60q10-20 30-24M96 80q-6 18-28 20" fill="none" stroke="#9c4426" stroke-width="2.5"/>
+ <circle cx="46" cy="118" r="22" fill="#f1d9bb"/><path d="M33 118a13 13 0 1 1 13 13M40 118a6 6 0 1 1 6 6" fill="none" stroke="#d9b68c" stroke-width="2.5"/>
+ <g fill="#fbf1e3" stroke="#e6c9a3"><circle cx="112" cy="64" r="3.5"/><circle cx="124" cy="88" r="3.5"/><circle cx="108" cy="96" r="3"/><circle cx="85" cy="125" r="3.5"/><circle cx="130" cy="42" r="3"/><circle cx="25" cy="85" r="3"/></g>
+</symbol>
+<symbol id="coracao" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="aneis" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M9 6l1.5-2h3L15 6"/></symbol>
+<symbol id="pes" viewBox="0 0 24 24"><ellipse cx="8" cy="14" rx="2.6" ry="4.2"/><ellipse cx="16" cy="10" rx="2.6" ry="4.2"/><path d="M6 20h4M14 16h4"/></symbol>
+<symbol id="cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M12 18s-3-1.8-3-4a1.7 1.7 0 0 1 3-1 1.7 1.7 0 0 1 3 1c0 2.2-3 4-3 4z"/></symbol>
+<symbol id="igreja" viewBox="0 0 24 24"><path d="M12 2v4M10.5 3.5h3M12 6l-5 4v10h10V10zM4 20h16"/><path d="M10 20v-3a2 2 0 0 1 4 0v3"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.4-6-10.5a6 6 0 0 1 12 0C18 15.6 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+<symbol id="mapa" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+<symbol id="cabide" viewBox="0 0 24 24"><path d="M12 8V6.5a2 2 0 1 1 2 2M12 8L3 16h18z"/></symbol>
+<symbol id="tacas" viewBox="0 0 24 24"><path d="M5 3h6l-.5 6a2.5 2.5 0 0 1-5 0zM8 11.5V20M5 20h6M13 6h6l-.5 5a2.5 2.5 0 0 1-5 0zM16 13.5V20M13 20h6"/></symbol>
+<symbol id="carta" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="1.5"/><path d="M3 7l9 7 9-7"/></symbol>
+<symbol id="presente" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><rect x="3" y="7" width="18" height="3.5"/><path d="M12 7v13M12 7c-3 0-4-4-1.5-4S12 7 12 7zm0 0c3 0 4-4 1.5-4S12 7 12 7z"/></symbol>
+<symbol id="pix" viewBox="0 0 24 24"><path d="M12 3l4.2 4.2a2 2 0 0 1 0 2.8L12 14.2 7.8 10a2 2 0 0 1 0-2.8zM9.400 12.400L7.800 14a2 2 0 0 0 0 2.800L12 21l4.200-4.200a2 2 0 0 0 0-2.800l-1.600-1.600"/></symbol>
+<symbol id="som" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5zM15.5 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol>
+<symbol id="mudo" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5zM16 9.5l5 5M21 9.5l-5 5"/></symbol>
+</svg>
+
+<div id="stage">
+
+  <div id="intro" role="button" tabindex="0" aria-label="Toque para abrir o convite">
+    <div class="iw"><img src="img/envelope.jpg" alt="Convite de Marília e João Daniel. Toque para abrir."><span class="anel"></span></div>
   </div>
- </section>
- <div class="footer">DO ZERO AO PRIMEIRO CLIENTE · INVESTIGAR COM CRITÉRIO, PROSPECTAR COM ESTRATÉGIA</div>
-</main>
-<div id="pdfContent"></div>
+
+  <div class="sc" id="sc">
+
+    <section class="sec capa">
+      <img class="foto" src="img/foto-capa.jpg" alt="Marília e João Daniel">
+      <img class="fl bl" src="img/flor-br.png" alt="">
+      <img class="fl br" src="img/flor-br.png" alt="">
+      <h1 class="rv">Marília &amp;<br>João Daniel</h1>
+      <p class="rv">Deus nos permitiu viver uma história de amor antes mesmo do altar. Hoje, celebramos diante d’Ele a realização de um dos nossos maiores sonhos.</p>
+      <div class="data rv">08 · 11 · 2026</div><p class="rv">às 15h</p>
+      <div class="div rv"><svg class="i"><use href="#coracao"/></svg></div>
+      <p class="rv">Star eventos · Suzano</p>
+    </section>
+
+    <section class="sec pais">
+      <img class="fl tl" src="img/flor-tl.png" alt="">
+      <img class="fl br" src="img/flor-br.png" alt="">
+      <h2 class="rv">Com a bênção<br>de seus pais</h2>
+      <div class="div rv"><svg class="i"><use href="#coracao"/></svg></div>
+      <div class="rv"><small>Mãe da noiva</small><strong>Roseli Trindade</strong>
+      <small>Pais do noivo</small><strong>Arimondes Losano</strong><strong>Maria Del Carmen<br>Estevez Garcia</strong></div>
+      <div class="div rv"><svg class="i"><use href="#coracao"/></svg></div>
+      <q class="rv">“Melhor serem dois do que um, porque têm melhor recompensa pelo seu trabalho. Se um cair, o outro levanta o seu companheiro.”</q>
+      <div class="ref rv">Eclesiastes 4:9-10</div>
+    </section>
+
+    <section class="sec">
+      <img class="fl tr sm" src="img/flor-tl.png" alt="">
+      <h2 class="rv">Nossa história</h2>
+      <div class="tl-w rv">
+        <div class="it"><span class="ic"><svg class="i"><use href="#coracao"/></svg></span><b>Novembro de 2016</b><p>Nossa história começou de um jeito simples e inesperado, em novembro de 2016. Em uma feira do nosso bairro, nos vimos pela primeira vez. Não sabíamos que aquele encontro seria o início de uma vida inteira compartilhada.</p></div>
+        <div class="it"><span class="ic"><svg class="i"><use href="#aneis"/></svg></span><b>Abril de 2017</b><p>Começamos a namorar em abril de 2017.</p></div>
+        <div class="it"><span class="ic"><svg class="i"><use href="#pes"/></svg></span><b>2018</b><p>Em 2018, chegou o nosso maior presente: nossa filha, que veio para transformar nossas vidas e nos ensinar, desde cedo, o verdadeiro significado de amar.</p></div>
+      </div>
+      <img class="faixa rv" src="img/fotos-faixa.jpg" alt="Fotos do casal">
+    </section>
+
+    <section class="sec">
+      <img class="fl tr sm" src="img/flor-tl.png" alt="">
+      <img class="fl bl sm" src="img/flor-br.png" alt="">
+      <h2 class="rv">Aprendemos<br>a permanecer</h2>
+      <div class="div rv"><svg class="i"><use href="#coracao"/></svg></div>
+      <p class="rv">Não foi sempre fácil. Fomos pais jovens, enfrentamos momentos turbulentos, tivemos dias em que tudo parecia difícil demais e, por vezes, pensamos em desistir.</p>
+      <p class="rv">Mas, em meio a tudo isso, também aprendemos a permanecer. Quando um fraquejava, o outro estava ali para apoiar. Quando a vida apertava, encontrávamos forças um no outro.</p>
+      <p class="rv">Crescemos juntos, erramos, aprendemos, amadurecemos e construímos, pouco a pouco, a nossa família.</p>
+      <img class="moldura rv" src="img/foto-casal.jpg" alt="Marília e João Daniel abraçados">
+    </section>
+
+    <section class="sec">
+      <img class="fl tl" src="img/flor-tl.png" alt="">
+      <img class="fl br" src="img/flor-br.png" alt="">
+      <h2 class="rv">Nosso novo<br>capítulo</h2>
+      <p class="rv">Hoje, quase 10 anos depois daquele primeiro encontro, olhamos para trás com o coração cheio de gratidão por tudo o que vivemos e, principalmente, por tudo o que nos tornamos.</p>
+      <p class="rv">Agora, mais maduros, unidos e certos do amor que escolhemos viver, chegou o momento de dar o passo que por tantos anos sonhamos: dizer “sim” diante de Deus e das pessoas que amamos.</p>
+      <div class="div rv"><svg class="i"><use href="#coracao"/></svg></div>
+      <p class="rv">Não é o começo da nossa história. É a celebração de tudo o que já construímos e a promessa de tudo o que ainda viveremos juntos.</p>
+      <p class="rv">Com amor,</p>
+      <div class="nomes rv" style="font-size:2.4rem">Marília &amp;<br>João Daniel</div>
+    </section>
+
+    <section class="sec">
+      <img class="fl tl sm" src="img/flor-tl.png" alt="">
+      <img class="fl br" src="img/flor-br.png" alt="">
+      <h2 class="rv">O grande dia</h2>
+      <div class="det rv">
+        <div><svg class="i ic"><use href="#cal"/></svg><span><em>DATA</em>08 de novembro de 2026</span></div>
+        <div><svg class="i ic"><use href="#igreja"/></svg><span><em>CERIMÔNIA</em>Domingo, às 15h</span></div>
+        <div><svg class="i ic"><use href="#pin"/></svg><span><em>LOCAL</em>Star eventos</span></div>
+        <div><svg class="i ic"><use href="#mapa"/></svg><span><em>ENDEREÇO</em>Rua Mario Maruca, SN<br>Jardim Vitória · Suzano – SP<br>CEP 08664-440</span></div>
+        <div><svg class="i ic"><use href="#cabide"/></svg><span><em>TRAJE</em>Esporte fino</span></div>
+      </div>
+      <div class="toque rv">Toque nos ícones para acessar</div>
+      <div class="arcos rv">
+        <button data-k="cerimonia"><svg class="i"><use href="#aneis"/></svg><span>Cerimônia</span></button>
+        <button data-k="celebracao"><svg class="i"><use href="#tacas"/></svg><span>Celebração</span></button>
+        <button data-k="presenca"><svg class="i"><use href="#carta"/></svg><span>Presença</span></button>
+        <button data-k="presentes"><svg class="i"><use href="#presente"/></svg><span>Presentes</span></button>
+        <button data-k="pix"><svg class="i"><use href="#pix"/></svg><span>Pix</span></button>
+      </div>
+    </section>
+  </div>
+
+  <button id="som" aria-label="Ligar ou desligar a música"><svg class="i"><use href="#som"/></svg></button>
+  <button id="mais" aria-label="Rolar para ver mais">Role para ver mais <b>⌄</b></button>
+
+  <div id="modal" aria-hidden="true"><img class="fl tl" src="img/flor-tl.png" alt=""><img class="fl br" src="img/flor-br.png" alt=""><div class="sheet"><button class="x" aria-label="Voltar ao convite">‹ Voltar</button><div id="conteudo"></div></div></div>
+</div>
+
+<audio id="audio" loop preload="auto"></audio>
+
 <script>
-const form=document.getElementById('investigationForm');
-let currentPage=1;
-const titles={1:'Identificação e presença digital',2:'Estrutura comercial e próximos passos'};
-function updatePage(){
- document.getElementById('page1').hidden=currentPage!==1;
- document.getElementById('page2').hidden=currentPage!==2;
- document.getElementById('pageTitle').textContent=titles[currentPage];
- document.getElementById('pagePill').textContent=`PÁGINA ${currentPage} / 2`;
- document.getElementById('stepLabel').textContent=`Etapa ${currentPage} de 2`;
- document.getElementById('progressBar').style.width=currentPage===1?'50%':'100%';
- document.getElementById('backBtn').disabled=currentPage===1;
- document.getElementById('nextBtn').hidden=currentPage===2;
- document.getElementById('pdfBtn').hidden=currentPage===1;
- window.scrollTo({top:0,behavior:'smooth'});
+/* ============ EDITE AQUI ============ */
+const CFG = {
+  musica: "musica.mp3",            // coloque seu .mp3 na mesma pasta; se não existir, toca uma melodia suave gerada pelo navegador
+  whatsapp: "5511999999999",       // DDI + DDD + número
+  listaPresentes: "https://listas.casasbahia.com.br/",   // COLOQUE AQUI o link da sua lista de presentes na loja
+  mapa: "https://www.google.com/maps/search/?api=1&query=Star+eventos+Suzano",
+  dbUrl: "",   // opcional: endereço do Firebase Realtime Database para salvar as confirmações de presença (sem ele, a confirmação vai pelo WhatsApp)
+  pix: { chave:"seu-pix@email.com", titular:"Nome do titular", copiaECola:"" }, // copiaECola: código Pix completo (opcional)
+  celebracao: "Após a cerimônia, venha celebrar conosco no mesmo local. Será uma alegria ter você nesse momento."
+};
+/* ================================== */
+
+const $=s=>document.querySelector(s), intro=$('#intro'), sc=$('#sc'), som=$('#som'), mais=$('#mais'), audio=$('#audio'), modal=$('#modal'), cont=$('#conteudo');
+
+/* --- Música --- */
+let synth=null, usandoSynth=false, tocando=false;
+function criaSynth(){
+  const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return null;
+  const ctx=new AC(), mestre=ctx.createGain(); mestre.gain.value=.5;
+  const lp=ctx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=2200;
+  const d=ctx.createDelay(1); d.delayTime.value=.38; const fb=ctx.createGain(); fb.gain.value=.38; d.connect(fb); fb.connect(d);
+  lp.connect(mestre); lp.connect(d); d.connect(mestre); mestre.connect(ctx.destination);
+  const acordes=[[48,52,55,60],[45,52,57,60],[41,48,53,60],[43,50,55,59]]; // C Am F G
+  let prox=ctx.currentTime+.1, passo=0; const dur=.46, seq=[0,1,2,3,2,1,2,3];
+  const hz=n=>440*Math.pow(2,(n-69)/12);
+  function nota(n,t,v,len){const o=ctx.createOscillator(),g=ctx.createGain();o.type='triangle';o.frequency.value=hz(n);
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0008,t+len);o.connect(g);g.connect(lp);o.start(t);o.stop(t+len+.05);}
+  function agenda(){while(prox<ctx.currentTime+.6){const ac=acordes[Math.floor(passo/8)%4],i=passo%8;
+      nota(ac[seq[i]]+12,prox,.16,1.6);
+      if(i===0){nota(ac[0]-12,prox,.2,3.4);nota(ac[1]+24,prox+dur*3,.07,1.4);} prox+=dur;passo++;}}
+  setInterval(agenda,150);
+  return {play:()=>ctx.resume(),pause:()=>ctx.suspend()};
 }
-document.getElementById('nextBtn').addEventListener('click',()=>{currentPage=2;updatePage()});
-document.getElementById('backBtn').addEventListener('click',()=>{currentPage=1;updatePage()});
-document.getElementById('clearBtn').addEventListener('click',()=>{
- if(confirm('Tem certeza de que deseja apagar todas as respostas?')){form.reset();currentPage=1;updatePage();}
-});
-function value(id){const el=document.getElementById(id);return el?el.value.trim():''}
-function checked(name){return [...form.querySelectorAll(`[name="${name}"]:checked`)].map(x=>x.value).join(', ')}
-function selected(name){const el=form.querySelector(`[name="${name}"]:checked`);return el?el.value:''}
-function dateBR(v){if(!v)return '';const [y,m,d]=v.split('-');return `${d}/${m}/${y}`}
-const pages=[
- {number:1,sections:[
-  {title:'01 · Identificação do negócio',items:[['Nome da empresa / segmento','company'],['Cidade / bairro / endereço comercial','location']]},
-  {title:'02 · Links e contato comercial público',items:[['Link do Google Maps','maps'],['Instagram / outras redes','social'],['Site, catálogo ou cardápio','site'],['Contato comercial público e onde foi encontrado','contact']]},
-  {title:'03 · Atividade nas redes sociais',items:[['Data da última postagem observada',()=>dateBR(value('lastPost'))],['Publica com frequência?',()=>selected('frequency')],['Formatos encontrados',()=>checked('formats')]]},
-  {title:'04 · O que já funciona',items:[['Pontos positivos observados', 'strengths']]},
-  {title:'05 · Oportunidades de melhoria',items:[['Problema / oportunidade 1 + evidência','opportunity1'],['Problema / oportunidade 2 + evidência','opportunity2']]}
- ]},
- {number:2,sections:[
-  {title:'06 · Estrutura comercial',items:[['O negócio possui',()=>checked('structure')],['É fácil entender o que vende e como entrar em contato?','clarity']]},
-  {title:'07 · Classificação e prioridade',items:[['Perfil digital',()=>selected('profile')],['Prioridade',()=>selected('priority')],['Justificativa baseada no que foi observado','reason']]},
-  {title:'08 · Ideia de material demonstrativo',items:[['Primeira peça sugerida','piece'],['Objetivo do material e para quem seria','objective'],['Links e arquivos de referência disponíveis','references']]},
-  {title:'09 · Pendências e próximo passo',items:[['Informações que ainda precisamos confirmar','pending'],['Autorização necessária para uso de imagens, marcas ou vídeos','authorization'],['Próxima ação e responsável','nextAction']]}
- ]}
-];
-function buildPDF(){
- const company=value('company')||'Empresa não identificada';
- const root=document.getElementById('pdfContent');
- root.innerHTML='';
- pages.forEach((page,index)=>{
-  const sheet=document.createElement('section');sheet.className='pdf-page';
-  const head=document.createElement('header');head.className='pdf-head';
-  head.innerHTML=`<div class="pdf-kicker">Do zero ao primeiro cliente</div><h1>Ficha de investigação de empresa</h1><p>${escapeHTML(company)} · Uma ficha por empresa · Preenchida com dados observados</p>`;
-  sheet.appendChild(head);
-  page.sections.forEach(section=>{
-   const sec=document.createElement('section');sec.className='pdf-section';
-   const h=document.createElement('h2');h.textContent=section.title;sec.appendChild(h);
-   section.items.forEach(([label,source])=>{
-    let v=typeof source==='function'?source():value(source);
-    const item=document.createElement('div');item.className='pdf-item';
-    const b=document.createElement('b');b.textContent=label;
-    const val=document.createElement('div');val.textContent=v||'Não informado';
-    if(!v)val.className='pdf-empty';
-    item.append(b,val);sec.appendChild(item);
-   });
-   sheet.appendChild(sec);
-  });
-  const foot=document.createElement('div');foot.className='pdf-foot';
-  foot.innerHTML=`<span>Documento de investigação comercial · ${new Date().toLocaleDateString('pt-BR')}</span><span>Página ${index+1} de 2</span>`;
-  sheet.appendChild(foot);root.appendChild(sheet);
- });
+function iniciaSynth(){usandoSynth=true;synth=synth||criaSynth();if(synth){synth.play();tocando=true;icone();}}
+function tocar(){
+  if(usandoSynth){iniciaSynth();return;}
+  audio.play().then(()=>{tocando=true;icone();}).catch(iniciaSynth);
 }
-function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-document.getElementById('pdfBtn').addEventListener('click',()=>{
- buildPDF();
- const oldTitle=document.title;
- document.title=`Ficha de investigação - ${value('company')||'Empresa'}`;
- window.print();
- document.title=oldTitle;
-});
+function pausar(){tocando=false;if(usandoSynth){synth&&synth.pause();}else audio.pause();icone();}
+function icone(){som.innerHTML='<svg class="i"><use href="#'+(tocando?'som':'mudo')+'"/></svg>';}
+som.onclick=()=>tocando?pausar():tocar();
+audio.src=CFG.musica;
+
+/* --- Abrir envelope --- */
+let aberto=false;
+function abrir(){
+  if(aberto)return;aberto=true;intro.classList.add('go');
+  tocar();
+  setTimeout(()=>{som.classList.add('on');mais.classList.add('on');revela(document.querySelector('.sec'));icone();},1100);
+  setTimeout(()=>intro.remove(),2800);
+}
+intro.addEventListener('click',abrir);
+intro.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();abrir();}});
+
+/* --- Revelar seções ao rolar --- */
+function revela(el){if(el)el.classList.add('in');}
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&revela(e.target)),{root:sc,threshold:.3});
+document.querySelectorAll('.sec').forEach(s=>io.observe(s));
+sc.addEventListener('scroll',()=>mais.classList.toggle('off',sc.scrollTop>40),{passive:true});
+mais.onclick=()=>sc.scrollBy({top:innerHeight*.9,behavior:'smooth'});
+
+/* --- Janelas dos ícones --- */
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const T={
+  cerimonia:()=>'<h3>Cerimônia</h3><p>Será uma honra ter você ao nosso lado neste momento.</p><div class="info"><div><em>DATA</em>Domingo, 08 de novembro de 2026</div><div><em>HORÁRIO</em>15h</div><div><em>LOCAL</em>Star eventos</div><div><em>ENDEREÇO</em>Rua Mario Maruca, SN<br>Jardim Vitória · Suzano – SP<br>CEP 08664-440</div><div><em>TRAJE</em>Esporte fino</div></div><a class="cta" href="'+CFG.mapa+'" target="_blank" rel="noopener">Abrir no mapa</a>',
+  celebracao:()=>'<h3>Celebração</h3><p>'+esc(CFG.celebracao)+'</p><div class="info"><div><em>LOCAL</em>Star eventos · Suzano – SP</div><div><em>DATA</em>08 de novembro de 2026</div></div><a class="cta" href="'+CFG.mapa+'" target="_blank" rel="noopener">Abrir no mapa</a>',
+  presenca:()=>'<h3>Confirmar presença</h3><p>Quantas pessoas vão? (até 8)</p><input id="pn" placeholder="Seu nome" maxlength="60"><div class="qs">'+[1,2,3,4,5,6,7,8].map(n=>'<button data-n="'+n+'">'+n+'</button>').join('')+'</div><div class="st" id="st"></div><button class="cta" id="env" style="border:0;cursor:pointer">Confirmar presença</button>',
+  presentes:()=>'<h3>Presentes</h3><p>Preparamos uma lista de presentes em uma loja. É só escolher o que quiser e comprar pelo link.</p><a class="cta" href="'+CFG.listaPresentes+'" target="_blank" rel="noopener">Ver lista de presentes</a><br><br><p>Prefere dar o presente em dinheiro?</p><button class="cta line" data-go="pix">Presentear com Pix</button>',
+  pix:()=>'<h3>Pix</h3><p>Se preferir, envie o seu presente por Pix. Obrigado pelo carinho!</p><div class="pix"><b>Titular</b><br><small>'+esc(CFG.pix.titular)+'</small><br><br><b>Chave Pix</b><code>'+esc(CFG.pix.chave)+'</code><button class="cta line" data-c="'+esc(CFG.pix.chave)+'">Copiar chave Pix</button>'+(CFG.pix.copiaECola?'<br><br><b>Pix copia e cola</b><code>'+esc(CFG.pix.copiaECola)+'</code><button class="cta line" data-c="'+esc(CFG.pix.copiaECola)+'">Copiar código</button>':'')+'</div>'
+};
+
+/* --- Presença, presentes e Pix --- */
+const gv=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d;}catch(e){return d;}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const dbu=p=>CFG.dbUrl.replace(/\/$/,'')+'/'+p+'.json';
+const say=t=>{const s=$('#st');if(s)s.textContent=t;};
+function zap(txt){window.open('https://wa.me/'+CFG.whatsapp+'?text='+encodeURIComponent(txt),'_blank');}
+
+function initPresenca(){
+  let qtd=0; $('#pn').value=gv('meunome','');
+  document.querySelectorAll('.qs button').forEach(b=>b.onclick=()=>{qtd=+b.dataset.n;document.querySelectorAll('.qs button').forEach(x=>x.classList.toggle('on',x===b));say('');});
+  $('#env').onclick=async()=>{
+    const nome=$('#pn').value.trim(); if(!nome)return say('Escreva seu nome.'); if(!qtd)return say('Escolha a quantidade de pessoas.');
+    sv('meunome',nome);
+    const fim=()=>{cont.innerHTML='<h3>Obrigado!</h3><p>Presença confirmada para '+qtd+(qtd>1?' pessoas':' pessoa')+', em nome de '+esc(nome)+'.</p>';};
+    if(!CFG.dbUrl){zap('Olá! Aqui é '+nome+'. Confirmo presença para '+qtd+(qtd>1?' pessoas':' pessoa')+' no casamento de vocês!');return;}
+    say('Enviando…');
+    try{const r=await fetch(dbu('confirmacoes'),{method:'POST',body:JSON.stringify({nome,quantidade:qtd,quando:Date.now()})});r.ok?fim():say('Não foi possível enviar. Tente de novo.');}
+    catch(e){say('Sem conexão. Tente de novo.');}
+  };
+}
+function copiar(txt,b){
+  const ok=()=>{const o=b.textContent;b.textContent='COPIADO ✔';setTimeout(()=>b.textContent=o,2000);};
+  const fb=()=>{const t=document.createElement('textarea');t.value=txt;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();try{document.execCommand('copy');ok();}catch(e){}t.remove();};
+  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(txt).then(ok,fb);else fb();
+}
+function abreModal(k){
+  cont.innerHTML=T[k]();document.querySelector('.sheet').scrollTop=0;
+  modal.classList.add('on');modal.setAttribute('aria-hidden','false');
+  try{history.pushState({p:k},'','#'+k);}catch(e){}
+  if(k==='presenca')initPresenca();
+  cont.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>copiar(b.dataset.c,b));
+  cont.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>abreModal(b.dataset.go));
+}
+function oculta(){modal.classList.remove('on');modal.setAttribute('aria-hidden','true');}
+function fecha(){if(!modal.classList.contains('on'))return;if(history.state&&history.state.p)history.back();else oculta();}
+addEventListener('popstate',oculta);
+document.querySelectorAll('.arcos button').forEach(b=>b.onclick=()=>abreModal(b.dataset.k));
+$('.x').onclick=fecha;
+addEventListener('keydown',e=>{if(e.key==='Escape')fecha();});
 </script>
-</body></html>
+</body>
+</html>
